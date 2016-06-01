@@ -96,7 +96,7 @@ function DrawEducationEntry(id) {
 
 //Main function
 function DrawTables() {
-	$(".redraw").children().remove();
+	$(".redraw").children().not('.header').remove(); //$(".redraw").children().remove(); // alt: 
 	//Iterate through all of the categories listed in JSON, and create the entry
 	for(var x = 0; x < experience.category.length; x += 1) { DrawCategoryEntry(x); };
 	for(var x = 0; x < experience.job.length; x += 1) { DrawJobEntry(x); };	
