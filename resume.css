@@ -1,0 +1,205 @@
+#name {
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', Arial;
+    font-size: 24pt;
+    padding: 8px;
+    color:rgba(0,0,0,.6);
+    text-shadow:#e0e0e0 1px 1px 0;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    width: 930px;
+}
+
+/* Jobs */
+#jobs {
+    border: 1px solid;
+    width: 640px;
+    display: inline-block;
+}
+.job_description {
+    text-align: left;
+    padding: 4px;
+}
+.job_name {
+    width: 230px;
+}
+.job_date {
+    width: 85px;
+}
+.job_title {
+    width: 200px;
+}
+.job_location {
+    width: 100px;
+}
+
+/* Categories */
+.category_name {
+    width: 75px;
+}
+.category_classes {
+    width: 100px;
+}
+.category_experience {
+    width: 100px;
+}
+
+/* Education */
+.education_year,
+.education_gpa {
+    width: 25%;
+    text-align: right;
+}
+.education_name, .education_org, .education_major{
+    width: 75%;
+    text-align: left;
+}
+.education_org {
+    width: 100%;
+}
+
+.education_entry * {
+    overflow: hidden;
+    display: inline-block;
+}
+.education_org > div,
+.education_name > div,
+.education_year > div,
+.education_gpa > div,
+.education_major > div
+{
+    padding: 2 4 2 4;
+}
+
+/* Multiple sections */
+#jobs, #side, #categories, #education  { vertical-align: top; }
+.job_entry:not(:last-child),
+.category_entry:not(:last-child),
+.education_entry:not(:last-child) {
+    border-bottom: 1px solid !important;
+}
+
+#categories,
+#education,
+#certification {
+    width: 300px;
+}
+
+#side {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+}
+.education_entry,
+.category_entry{
+    border-bottom: 1px solid #000;
+}
+
+#container {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+#side {
+    display: inline-block;
+}
+.check_container {
+    vertical-align: middle !important;
+}
+.inactive *:not(.check_container) {
+    opacity: 0.5;
+}
+.job_entry *:not(.job_description),
+.category_entry *:not(.category_description) {
+    display: inline-block;
+}
+.job_entry *:not(.job_description),
+.category_entry {
+    text-align: center;
+}
+.job_entry, .category_entry {
+    padding: 2 0 2 0;
+}
+.category_name,
+.job_name,
+.job_title,
+.education_org {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Arial';
+    font-size: 10pt;
+}
+.category_name,
+.job_name,
+.job_title,
+.education_org { background-color: #666666;}
+
+.category_classes, .job_date, .job_location,
+.education_name, .education_major, .education_year,
+.education_gpa {
+    color: #000000;
+    font-family: 'Open Sans', Arial;
+    font-size: 10pt;
+}
+
+.education_name, .education_year { background-color: #CCCCCC; }
+.education_major, .education_gpa, .education_entry:not(.degree) { background-color: #FFFFFF; }
+
+.category_classes, .job_date, .job_location { background-color: #cccccc}
+
+.category_experience {
+    color: #000000;
+    font-family: 'Open Sans', Arial;
+    font-size: 10pt;
+}
+.category_experience { background-color: #ffffff; }
+
+.category_description, .job_description {
+    color: #434343;
+    font-family: 'Gentium Basic', Arial;
+    font-size: 10pt;
+}
+
+.category_description, .job_description { background-color: #efefef; }
+
+#container {
+    border: 8px ridge #cccccc;
+    padding: 4 6 4 4;
+}
+
+@media screen and (max-width: 950px),
+	screen and (orientation:portrait) {
+	#jobs {
+		order: 2;
+	}
+	#side {
+		order: 1;
+		display: inline-block;
+		width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#categories,
+	#education {
+		display: inline-block;
+		margin: 8 4 8 4;
+	}
+	#container {
+		width: 640px !important;
+		flex-direction: column;
+		display: flex;
+	}
+	.education_entry,
+	.category_entry{
+		border-right: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+	#education, #categories {
+		border-top: 1px solid #000;
+	}
+	#name { width: 624px;}
+}
+
