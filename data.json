@@ -29,6 +29,13 @@
 			"linked": ["COMM_1001", "PSYC_1001", "NASC_1001", "SOCI_4080", "ITEC_4902", "ITEC_2020", "ITEC_3040", "ITEC_4020", "COMM_A241", "ENGL_A111", "ENGL_A201", "ENGL_A212", "MATH_A105", "PHIL_A301", "PHIL_A201", "PER_A125", "CNT_A165", "CNT_A282", "CNT_A290"]}
 	],
 	"job": [
+		{"name": "McAfee",
+			"linked": ["Model", "View", "Controller", "Client", "Network", "Server", "Tools", "Practices", "Versatility"],
+			"startDate": "11/16",
+			"endDate": "N/A",
+			"location": "Hillsboro, OR",
+			"title": "Software Development Engineer",
+			"description": "Developed libraries for customer build requirements and provided DSL for direct usage.<br>Educated customers, team members, and an intern in effective usage of the build workflow."},
 		{"name": "Integrated Bank Technology",
 			"linked": ["Model", "View", "Controller", "Client", "Server", "Tools", "Practices", "Versatility"],
 			"startDate": "02/14",
