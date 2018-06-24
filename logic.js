@@ -123,16 +123,17 @@ function LengthOfExperience(id) {
     for(var x = 0; x < experience.job.length; x += 1) {
 		if(experience.job[id].endDate == "N/A"){
 			var today = new Date();
-			var endMonth = parseInt(today.getMonth());
 			var endYear = parseInt(today.getFullYear().toString().substr(-2));
+			var endMonth = parseInt(today.getMonth()) + 1;
 		} else {
-			var endMonth = parseInt(experience.job[id].endDate.split("/")[0]);
 			var endYear = parseInt(experience.job[id].endDate.split("/")[1]);
+			var endMonth = parseInt(experience.job[id].endDate.split("/")[0]);
 		}
 		length = ((( endYear - 
 		parseInt(experience.job[id].startDate.split("/")[1]))*12) -
 		parseInt(experience.job[id].startDate.split("/")[0]) +
 		endMonth)
+		console.log(experience.job[id].name + " : " + length + " months");
     }
 	return length;
 }
